@@ -71,7 +71,7 @@ function read () {
           bracketType: 0
         },
         b: {
-          addAccidentals: true,
+          addAccidentals: false,
           bracketType: 0
         }
       },
@@ -85,7 +85,7 @@ function read () {
     setting8: {
       addAccidentals: true,
       bracketType: 0,
-      cancelOctaves: false,
+      cancelOctaves: true,
       parseGraceNotes: true,
       cancelMode: true
     },

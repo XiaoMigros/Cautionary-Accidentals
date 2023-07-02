@@ -10,6 +10,7 @@ A plugin for MuseScore 3 & 4 that adds cautionary accidentals to your score. Mus
 - Modern UI styled after MuseScore 4
 
 ## Screenshot
+![Screenshot of the plugin's settings window](/assets/display.png)
 
 ## Installation
 Download the [latest release](https://github.com/XiaoMigros/cautionary-accidentals/archive/main.zip) and move the file(s) to MuseScore's 'Plugins' folder, then follow the standard plugin installation process for your MuseScore version.

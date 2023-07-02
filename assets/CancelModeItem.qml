@@ -31,7 +31,7 @@ ColumnLayout {
 	opacity: enabled ? 1.0 : ui.theme.itemOpacityDisabled
 	width: parent.width - Layout.leftMargin
 	
-	signal clicked(int nvalue)
+	signal clicked
 	signal setv(int value)
 	//signal set
 	
