@@ -1,0 +1,12 @@
+.mscbackup
+*.mscz
+*.mscx
+*.mscz,
+*.mscx,
+*.mscz~
+*.mscx~
+*.mscz.autosave
+*.mscx.autosave
+templatecreator.qml
+assets/defaultsettings.json
+assets/usersettings.json
