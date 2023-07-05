@@ -48,6 +48,8 @@ MuseScore {
 		if (!curScore.selection.elements.length) {
 			console.log("No selection. Applying plugin to all notes...")
 			cmd("select-all")
+		} else {
+			console.log("Applying plugin to selection")
 		}
 		var notes = []
 		for (var i in curScore.selection.elements) {
@@ -71,7 +73,7 @@ MuseScore {
 		note.accidentalType = Accidental.NONE
 		if (note.pitch != oldPitch) {
 			note.accidentalType = oldAccidental
-			console.log("keeping existing accidental for note " + tpcToName(note.tpc))
+			console.log("Keeping existing accidental for note " + tpcToName(note.tpc))
 		} else {
 			console.log("Removing accidental from note " + tpcToName(note.tpc))
 		}

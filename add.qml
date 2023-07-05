@@ -36,13 +36,11 @@ MuseScore {
 		}
 	}
 	
-	property var actualSettings
-	
 	//todo:
 	//add option to restate accidentals coming from chromatic runs
 	//fix keysig bug
 	
-	//Default settings:
+	//Settings vars:
 	
 	//cancel single accidentals when preceded by double
 	property var setting0: true
@@ -77,7 +75,7 @@ MuseScore {
 	property var setting9: [true, true]
 	//in same measure, in different measure
 	//option true: add accidentals as needed until cancelled in original octave //stop after cancelled in original octave
-	//   notes of same tick should all get cancelled for clarity TODO???
+	//   notes of same tick get cancelled
 	//   cancelling has to happen in original staff
 	//option false: continue to add accidentals as needed if not previously cancelled in same octave //cancel in all octaves
 	
@@ -251,8 +249,8 @@ MuseScore {
 					}
 				}
 				if (setting2[0]) {
-					if (isSameNoteName(note, testNote) && !isSamePitch(note, testNote) && isSameOctave(note, testNote) &&
-						isSameMeasure(note, testNote) && isSamePart(note, testNote) && (setting2[2] || !isGraceNote(testNote))) {
+					if (isSameNoteName(note, testNote) && !isSamePitch(note, testNote) && isSameOctave(note, testNote) && isSameMeasure(note, testNote) &&
+						!isSameStaff(note, testNote) && isSamePart(note, testNote) && (setting2[2] || !isGraceNote(testNote))) {
 						if (setting2[3] == 0 || (setting2[3] == 1 && isSameTick(note, testNote)) || (setting2[3] == 2 && isSameBeat(note, testNote))) {
 							var check = true
 							for (var k in cancelledNotes) {
@@ -275,8 +273,8 @@ MuseScore {
 					}
 				}
 				if (setting3[0]) {
-					if (isSameNoteName(note, testNote) && !isSamePitch(note, testNote) && !isSameOctave(note, testNote) &&
-						isSameMeasure(note, testNote) && !isSameStaff(note, testNote) && isSamePart(note, testNote) && (setting3[2] || !isGraceNote(testNote))) {
+					if (isSameNoteName(note, testNote) && !isSamePitch(note, testNote) && !isSameOctave(note, testNote) && isSameMeasure(note, testNote) &&
+						!isSameStaff(note, testNote) && isSamePart(note, testNote) && (setting3[2] || !isGraceNote(testNote))) {
 						if (setting3[3] == 0 || (setting3[3] == 1 && isSameTick(note, testNote)) || (setting3[3] == 2 && isSameBeat(note, testNote))) {
 							var check = true
 							for (var k in cancelledNotes) {
@@ -377,7 +375,7 @@ MuseScore {
 				}
 				if (changeNote) {
 					if (isSameTick(note, testNote) && (testNote.tpc > 26 || testNote.tpc < 6)) {
-						changeBracket.push(0) //dont add brackets to reduced accidentals on same beat
+						changeBracket.push(0) //dont add brackets to reduced accidentals on same beat //TODO: same measure?
 					}
 					changeBracket.sort()
 					restateAccidental(note, (setting0 ? (testNote.tpc > 26 || testNote.tpc < 6) : false), changeBracket[0])
@@ -531,7 +529,7 @@ MuseScore {
 			note.accidentalType = accidental
 			note.accidental.visible = note.visible
 			note.accidental.accidentalBracket = bracketType
-			console.log("Added a cautionary accidental to note "+  tpcToName(note.tpc))
+			console.log("Added a cautionary accidental to note " + tpcToName(note.tpc))
 			//0 = none, 1 = parentheses, 2 = brackets
 		}
 	}
