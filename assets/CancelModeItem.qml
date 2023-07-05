@@ -25,7 +25,7 @@ import MuseScore.UiComponents 1.0 as MU
 ColumnLayout {
 	id: layout
 	property int margin: 10
-	property int value: radioButton1.checked ? 1 : 2 //fix for actual setting (==1)
+	property int value: radioButton1.checked ? 1 : 2
 	spacing: margin
 	Layout.leftMargin: margin
 	opacity: enabled ? 1.0 : ui.theme.itemOpacityDisabled
