@@ -598,7 +598,7 @@ MuseScore {
 										MU.CheckBox {
 											id: setting74Box
 											enabled: setting7Column.accOn
-											text: qsTr("Add cautionary if note with accidental is a grace note")
+											text: qsTr("Add cautionary if note before key change is a grace note")
 											checked: false
 											onClicked: {checked = !checked; updatesetting7Img()}
 											signal setv(bool checked)
@@ -655,7 +655,7 @@ MuseScore {
 										MU.CheckBox {
 											id: setting84Box
 											enabled: setting8Column.accOn
-											text: qsTr("Add cautionary if note with accidental is a grace note")
+											text: qsTr("Add cautionary if note before key change is a grace note")
 											checked: false
 											onClicked: {checked = !checked; updatesetting8Img()}
 											signal setv(bool checked)
@@ -955,6 +955,7 @@ MuseScore {
 	function updatesetting7Img() {
 		var imgsource = "examples/setting7/example-"
 		if (setting7Acc.checked) {
+			imgsource += setting74Box.checked ? "1" : "0"
 			imgsource += setting7Acc.currentValue.toString()
 			imgsource += setting73Box.checked ? setting7Cancel.value.toString() : "0"
 		} else {
