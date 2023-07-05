@@ -18,70 +18,70 @@
 //==============================================
 
 function read () {
-    var settings = {
-      version: "4.0-beta",
-      setting0: {
-        addNaturals: false
-      },
-      setting1: {
+  var settings = {
+    version: "4.0-beta",
+    setting0: {
+      addNaturals: false
+    },
+    setting1: {
+      addAccidentals: true,
+      bracketType: 0,
+      parseGraceNotes: true,
+      durationMode: 0
+    },
+    setting2: {
+      addAccidentals: true,
+      bracketType: 0,
+      parseGraceNotes: true,
+      durationMode: 0
+    },
+    setting3: {
+      addAccidentals: true,
+      bracketType: 0,
+      parseGraceNotes: false,
+      durationMode: 0
+    },
+    setting4: {
+      a: {
         addAccidentals: true,
         bracketType: 0,
-        parseGraceNotes: true,
-        durationMode: 0
+        parseGraceNotes: false
       },
-      setting2: {
+      b: {
+        addAccidentals: false,
+        bracketType: 0,
+        parseGraceNotes: false
+      }
+    },
+	setting5: {
+      a: {
         addAccidentals: true,
         bracketType: 0,
-        parseGraceNotes: true,
-        durationMode: 0
+        parseGraceNotes: false
       },
-      setting3: {
-        addAccidentals: true,
+      b: {
+        addAccidentals: false,
         bracketType: 0,
-        parseGraceNotes: false,
-        durationMode: 0
-      },
-      setting4: {
-        a: {
-          addAccidentals: true,
-          bracketType: 0,
-          parseGraceNotes: false
-        },
-        b: {
-          addAccidentals: false,
-          bracketType: 0,
-          parseGraceNotes: false
-        }
-      },
-	  setting5: {
-        a: {
-          addAccidentals: true,
-          bracketType: 0,
-          parseGraceNotes: false
-        },
-        b: {
-          addAccidentals: false,
-          bracketType: 0,
-          parseGraceNotes: false
-        }
-      },
-      setting6: {
-        a: {
-          addAccidentals: true,
-          bracketType: 0
-        },
-        b: {
-          addAccidentals: false,
-          bracketType: 0
-        }
-      },
-      setting7: {
+        parseGraceNotes: false
+      }
+    },
+    setting6: {
+      a: {
         addAccidentals: true,
-        bracketType: 0,
-        cancelOctaves: false,
-        parseGraceNotes: true,
-        cancelMode: true
+        bracketType: 0
       },
+      b: {
+        addAccidentals: false,
+        bracketType: 0
+      }
+    },
+    setting7: {
+      addAccidentals: true,
+      bracketType: 0,
+      cancelOctaves: false,
+      parseGraceNotes: true,
+      cancelMode: true
+    },
     setting8: {
       addAccidentals: true,
       bracketType: 0,
