@@ -157,7 +157,7 @@ MuseScore {
 	}
 	
 	onRun: {
-		if (JSON.parse(options.uSettings).edited) {
+		if (options.uSettings && JSON.parse(options.uSettings).edited) {
 			loadSettings(JSON.parse(options.uSettings))
 		} else {
 			loadSettings(DSettings.read())
