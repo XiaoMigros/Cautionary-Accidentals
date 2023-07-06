@@ -28,7 +28,6 @@ ColumnLayout {
 	property int minSpace: 5
 	spacing: regSpace
 	Layout.topMargin: minSpace
-	width: parent.width
 	opacity: enabled ? 1.0 : ui.theme.itemOpacityDisabled
 	
 	property int value: radioButton0.checked ? 0 : (radioButton1.checked ? 1 : 2)
