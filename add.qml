@@ -191,7 +191,7 @@ MuseScore {
 						testCount++
 					}
 					if (b.accidentalType == Accidental.SHARP2 || b.accidentalType == Accidental.FLAT2) {
-						testCount++
+						testCount++//-- ??
 					}
 				}
 				return testCount

@@ -173,6 +173,7 @@ MuseScore {
 									
 									CancelModeItem {
 										id: setting9aCancel
+										width: parent.width - Layout.leftMargin
 										onClicked: updatesetting9aImg()
 									}
 								}
@@ -196,6 +197,7 @@ MuseScore {
 									
 									CancelModeItem {
 										id: setting9bCancel
+										width: parent.width - Layout.leftMargin
 										onClicked: updatesetting9bImg()
 									}
 								}
@@ -301,6 +303,7 @@ MuseScore {
 										}
 										DurationModeItem {
 											id: setting1Duration
+											width: parent.width
 											enabled: setting1Column.accOn
 											onClicked: updatesetting1Img()
 										}
@@ -408,6 +411,7 @@ MuseScore {
 										}
 										DurationModeItem {
 											id: setting2Duration
+											width: parent.width
 											enabled: setting2Column.accOn
 											onClicked: updatesetting2Img()
 										}
@@ -499,6 +503,7 @@ MuseScore {
 										}
 										DurationModeItem {
 											id: setting3Duration
+											width: parent.width
 											enabled: setting3Column.accOn
 											onClicked: updatesetting3Img()
 										}
@@ -615,6 +620,7 @@ MuseScore {
 										}
 										CancelModeItem {
 											id: setting7Cancel
+											width: parent.width - Layout.leftMargin
 											enabled: setting7Column.accOn && setting73Box.checked
 											onClicked: updatesetting7Img()
 										}
@@ -672,6 +678,7 @@ MuseScore {
 										}
 										CancelModeItem {
 											id: setting8Cancel
+											width: parent.width - Layout.leftMargin
 											enabled: setting8Column.accOn && setting83Box.checked
 											onClicked: updatesetting8Img()
 										}

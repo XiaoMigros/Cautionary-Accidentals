@@ -29,7 +29,6 @@ ColumnLayout {
 	spacing: margin
 	Layout.leftMargin: margin
 	opacity: enabled ? 1.0 : ui.theme.itemOpacityDisabled
-	width: parent.width - Layout.leftMargin
 	
 	signal clicked
 	signal setv(int value)
