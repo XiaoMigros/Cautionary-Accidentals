@@ -24,13 +24,13 @@ import "assets/defaultsettings.js" as DSettings
 
 MuseScore {
 	version: "4.0-beta"
-	menuPath: "Accidentals.Add Cautionary Accidentals"
-	description: "This plugin adds cautionary accidentals to the score"
+	menuPath: "Plugins." + qsTr("Accidentals") + "." + qsTr("Add Cautionary Accidentals")
+	description: qsTr("This plugin adds cautionary accidentals to the score")
 	requiresScore: true
 	
 	Component.onCompleted: {
 		if (mscoreMajorVersion >= 4) {
-			title = "Add Cautionary Accidentals"
+			title = qsTr("Add Cautionary Accidentals")
 			categoryCode = "composing-arranging-tools"
 			thumbnailName = "assets/logo.png"
 		}
@@ -200,7 +200,7 @@ MuseScore {
 			}
 		})
 		for (var i = notes.length-1; i >= 0; i--) {
-			if (notes[i].accidental) {
+			if (notes[i].accidental && notes[i].accidental.visible) {
 				var notes2 = notes.slice(0)
 				addAccidentals(notes2.splice(i, notes2.length)) //notes.subarray non-functional
 			} else {

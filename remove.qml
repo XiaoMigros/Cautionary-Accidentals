@@ -22,13 +22,13 @@ import MuseScore 3.0
 
 MuseScore {
 	version: "4.0-beta"
-	menuPath: "Accidentals.Remove Cautionary Accidentals"
-	description: "This plugin removes cautionary accidentals from the score"
+	menuPath: "Plugins." + qsTr("Accidentals") + "." + qsTr("Remove Cautionary Accidentals")
+	description: qsTr("This plugin removes cautionary accidentals from the score")
 	requiresScore: true
 	
 	Component.onCompleted: {
 		if (mscoreMajorVersion >= 4) {
-			title = "Remove Cautionary Accidentals"
+			title = qsTr("Remove Cautionary Accidentals")
 			categoryCode = "composing-arranging-tools"
 			thumbnailName = "assets/logo.png"
 		}

@@ -4,7 +4,7 @@ A plugin for MuseScore 3 & 4 that adds cautionary accidentals to your score. Mus
 ### [Download](https://github.com/XiaoMigros/cautionary-accidentals/archive/main.zip)
 
 ## Features
-- Add cautionary accidentals to your score
+- Add or remove cautionary accidentals from your score
 - Choose from a wide variety of settings
 - Live updating previews to show you exactly what you get
 - Modern UI styled after MuseScore 4
